@@ -53,20 +53,26 @@ app.get("/signin1", (req, res) => {
     res.render('signin1');
  }); 
 
- app.get('/signinsubmit1', (req, res) => {
+app.get('/signinsubmit1', (req, res) => {
     const email = req.query.emil;
     const password = req.query.passwrd;
     db.collection('majorproject')
         .where("email", "==", email)
         .where("password", "==", password)
         .get()
-        .then((docs) => {
+      .then((docs) => {
+        if(docs.size>0){
+
             docs.forEach(function(doc){
                 var obj=doc.data();
                 res.render('ftdashboard',{data:obj});
             })
-        
-        })
+        }
+            else
+            {
+                res.render("logf");
+            }
+        });
  });
 
 
