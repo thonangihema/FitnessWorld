@@ -60,18 +60,21 @@ app.get("/signin1", (req, res) => {
         .where("email", "==", email)
         .where("password", "==", password)
         .get()
-        .then((docs) => {
+      .then((docs) => {
+        if(docs.size>0){
+
             docs.forEach(function(doc){
                 var obj=doc.data();
                 res.render('ftdashboard',{data:obj});
             })
-        
-        })
+        }
+            else
+            {
+                res.render("logf");
+            }
+        });
  });
 
-
-
- 
  app.listen(3000, function () {  
     console.log('Example app listening on port 3000!')  
     })
