@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+  background-color:black;
+  margin:0px;
+	background-size: 50% 50%;
+}
+h1, h2, h3, h4, h5, h6, a {
+  margin:0; padding:0;
+}
+.login {
+  margin:0 auto;
+  max-width:500px;
+}
+.login-header {
+  color:#fff;
+  text-align:center;
+  font-size:300%;
+}
+ .login-header h1 {
+   text-shadow: 0px 5px 15px rgb(0, 12, 17); 
+ }
+.login-form {
+  border:.5px solid #fff;
+  background:#e3ef06;
+  border-radius:10px;
+  box-shadow:0px 0px 10px rgb(248, 243, 243);
+}
+.login-form h3 {
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+}
+.login-form {
+  box-sizing:border-box;
+  padding-top:15px;
+	padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+.login-form input[type="button"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.sign-up{
+  color:#070606;
+  margin-left:-70%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.ver {
+  font-style: italic;
+  color: #180303;
+  font-size:large;
+  margin-left:-50%;
+}
+.logb{
+  font-size: larger;
+  color: rgb(247, 246, 246);
+  background-color: #010809;
+  width: 20%;
+  border-radius:25%;
+
+}
+.prof{
+  width: 40%;
+  border-radius: 50%;
+}
+    </style>
+</head>
+
+<body>
+
+<br><br><br>
+<div class="login">
+  <div class="login-header">
+    <h1>Login</h1>
+  </div>
+
+  <form action="/signinsubmit1" method="GET">
+     <div class="login-form">
+      <img src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png" class="prof">
+      <h3 style="color:#010809">Email:</h3>
+      <input type="text" placeholder="Enter Email" name="emil"/><br>
+      <h3 style="color:#010809">Password:</h3>
+      <input type="password" placeholder="Enter Password" name="passwrd"/>
+      <br>
+      <br>
+      <input type="submit" value="Login" class="logb"/>
+      <br>
+      <a href="http://localhost:3000/signup1" class="sign-up"><i>Sign Up!</i></a>
+      <br>
+
+      <div>
+        <br>
+        <h6><pre class="ver">                        please verify your details properly </pre></h6>
+        <br>
+      </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>
